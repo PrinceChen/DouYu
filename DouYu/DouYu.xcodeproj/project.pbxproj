@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A39655221E65AFB4002EE73C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39655211E65AFB4002EE73C /* AppDelegate.swift */; };
-		A39655241E65AFB4002EE73C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39655231E65AFB4002EE73C /* ViewController.swift */; };
 		A39655271E65AFB4002EE73C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A39655251E65AFB4002EE73C /* Main.storyboard */; };
 		A39655291E65AFB4002EE73C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A39655281E65AFB4002EE73C /* Assets.xcassets */; };
 		A396552C1E65AFB4002EE73C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A396552A1E65AFB4002EE73C /* LaunchScreen.storyboard */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		A396551E1E65AFB4002EE73C /* DouYu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouYu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39655211E65AFB4002EE73C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A39655231E65AFB4002EE73C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A39655261E65AFB4002EE73C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A39655281E65AFB4002EE73C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A396552B1E65AFB4002EE73C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +33,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A351B89E1E65CC52003E312D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A351B8A21E65CC52003E312D /* Main */,
+				A351B8A01E65CC52003E312D /* Home */,
+				A351B8A11E65CC52003E312D /* Live */,
+				A351B89F1E65CC52003E312D /* Follow */,
+				A351B8A31E65CC52003E312D /* Profile */,
+				A351B8A41E65CC52003E312D /* Tools */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A351B89F1E65CC52003E312D /* Follow */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Follow;
+			sourceTree = "<group>";
+		};
+		A351B8A01E65CC52003E312D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A351B8A11E65CC52003E312D /* Live */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		A351B8A21E65CC52003E312D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		A351B8A31E65CC52003E312D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		A351B8A41E65CC52003E312D /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		A39655151E65AFB4002EE73C = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +107,8 @@
 		A39655201E65AFB4002EE73C /* DouYu */ = {
 			isa = PBXGroup;
 			children = (
+				A351B89E1E65CC52003E312D /* Classes */,
 				A39655211E65AFB4002EE73C /* AppDelegate.swift */,
-				A39655231E65AFB4002EE73C /* ViewController.swift */,
 				A39655251E65AFB4002EE73C /* Main.storyboard */,
 				A39655281E65AFB4002EE73C /* Assets.xcassets */,
 				A396552A1E65AFB4002EE73C /* LaunchScreen.storyboard */,
@@ -137,7 +190,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A39655241E65AFB4002EE73C /* ViewController.swift in Sources */,
 				A39655221E65AFB4002EE73C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +356,7 @@
 				A39655321E65AFB5002EE73C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
