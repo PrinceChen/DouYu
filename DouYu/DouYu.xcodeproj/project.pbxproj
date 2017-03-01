@@ -40,6 +40,7 @@
 				A351B8A01E65CC52003E312D /* Home */,
 				A351B8A11E65CC52003E312D /* Live */,
 				A351B89F1E65CC52003E312D /* Follow */,
+				A35D46721E6653C700CDCC48 /* Discovery */,
 				A351B8A31E65CC52003E312D /* Profile */,
 				A351B8A41E65CC52003E312D /* Tools */,
 			);
@@ -70,6 +71,7 @@
 		A351B8A21E65CC52003E312D /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				A39655251E65AFB4002EE73C /* Main.storyboard */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -86,6 +88,13 @@
 			children = (
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		A35D46721E6653C700CDCC48 /* Discovery */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Discovery;
 			sourceTree = "<group>";
 		};
 		A39655151E65AFB4002EE73C = {
@@ -109,7 +118,6 @@
 			children = (
 				A351B89E1E65CC52003E312D /* Classes */,
 				A39655211E65AFB4002EE73C /* AppDelegate.swift */,
-				A39655251E65AFB4002EE73C /* Main.storyboard */,
 				A39655281E65AFB4002EE73C /* Assets.xcassets */,
 				A396552A1E65AFB4002EE73C /* LaunchScreen.storyboard */,
 				A396552D1E65AFB4002EE73C /* Info.plist */,
@@ -203,6 +211,7 @@
 				A39655261E65AFB4002EE73C /* Base */,
 			);
 			name = Main.storyboard;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		A396552A1E65AFB4002EE73C /* LaunchScreen.storyboard */ = {
