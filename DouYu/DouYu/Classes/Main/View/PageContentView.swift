@@ -13,11 +13,11 @@ private let ContentCellID = "ContentCellID"
 class PageContentView: UIView {
     
     fileprivate var childVcs: [UIViewController]
-    fileprivate var parentViewController: UIViewController
+    fileprivate weak var parentViewController: UIViewController?
     
-    fileprivate lazy var collectionView: UICollectionView = {
+    fileprivate lazy var collectionView: UICollectionView = { [weak self] in
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = self.bounds.size
+        layout.itemSize = (self?.bounds.size)!
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         layout.scrollDirection = .horizontal
@@ -28,13 +28,14 @@ class PageContentView: UIView {
         collectionView.isPagingEnabled = true
         collectionView.bounces = false
         collectionView.dataSource = self
+        collectionView.scrollsToTop = false
         
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: ContentCellID)
         
         return collectionView
     }()
 
-    init(frame: CGRect, childVcs: [UIViewController], parentViewController: UIViewController) {
+    init(frame: CGRect, childVcs: [UIViewController], parentViewController: UIViewController?) {
         self.childVcs = childVcs
         self.parentViewController = parentViewController
         
@@ -52,7 +53,7 @@ class PageContentView: UIView {
 extension PageContentView {
     fileprivate func setupUI() {
         for childVc in childVcs {
-            parentViewController.addChildViewController(childVc)
+            parentViewController?.addChildViewController(childVc)
         }
         
         addSubview(collectionView)
@@ -75,5 +76,13 @@ extension PageContentView: UICollectionViewDataSource {
         cell.contentView.addSubview(childVc.view)
         
         return cell
+    }
+}
+
+extension PageContentView {
+    func setCurrentIndex(currentIndex: Int) {
+        let offSetX = CGFloat(currentIndex) * collectionView.frame.width
+        collectionView.setContentOffset(CGPoint(x: offSetX, y: 0), animated: false)
+        
     }
 }

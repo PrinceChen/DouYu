@@ -13,11 +13,12 @@ private let kTitleViewH: CGFloat = 40
 
 class HomeViewController: UIViewController {
     
-    fileprivate lazy var pageTitleView: PageTitleView = {
+    fileprivate lazy var pageTitleView: PageTitleView = { [weak self] in
         let titleFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH, width: kScreenW, height: kTitleViewH)
         let titles = ["推荐", "手游", "娱乐", "游戏", "趣玩"]
         let titleView = PageTitleView(frame: titleFrame, titles: titles)
-//        titleView.backgroundColor = .orange
+
+        titleView.delegate = self
         return titleView
     }()
     
@@ -84,6 +85,14 @@ extension HomeViewController {
     }
     
 }
+
+extension HomeViewController: PageTitleViewDelegate {
+    func pageTitleView(titleView: PageTitleView, selectedIndex index: Int) {
+        pageContentView.setCurrentIndex(currentIndex: index)
+    }
+}
+
+
 
 
 
