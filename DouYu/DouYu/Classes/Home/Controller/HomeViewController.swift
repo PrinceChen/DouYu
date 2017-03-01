@@ -8,7 +8,18 @@
 
 import UIKit
 
+
+private let kTitleViewH: CGFloat = 40
+
 class HomeViewController: UIViewController {
+    
+    fileprivate lazy var pageTitleView: PageTitleView = {
+        let titleFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH, width: kScreenW, height: kTitleViewH)
+        let titles = ["推荐", "手游", "娱乐", "游戏", "趣玩"]
+        let titleView = PageTitleView(frame: titleFrame, titles: titles)
+//        titleView.backgroundColor = .orange
+        return titleView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +40,11 @@ class HomeViewController: UIViewController {
 // MARK: - set UI
 extension HomeViewController {
     fileprivate func setupUI() {
+        automaticallyAdjustsScrollViewInsets = false
+        
         setupNavigationBar()
+        
+        view.addSubview(pageTitleView)
     }
     
     private func setupNavigationBar() {
