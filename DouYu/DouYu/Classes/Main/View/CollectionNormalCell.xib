@@ -33,7 +33,7 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oy0-Da-rW2">
-                        <rect key="frame" x="148" y="3" width="60" height="20"/>
+                        <rect key="frame" x="153" y="0.0" width="60" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="geW-9B-V2E"/>
                             <constraint firstAttribute="width" constant="60" id="nQc-64-4LZ"/>
@@ -61,11 +61,17 @@
                 <constraint firstAttribute="bottom" secondItem="b0B-5B-DKX" secondAttribute="bottom" constant="10" id="Hmq-Bn-5Z0"/>
                 <constraint firstAttribute="trailing" secondItem="b0B-5B-DKX" secondAttribute="trailing" id="MHJ-PK-MZO"/>
                 <constraint firstItem="LXW-IG-dhC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="T1i-Pg-sac"/>
-                <constraint firstItem="Oy0-Da-rW2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="3" id="bxb-5y-ATA"/>
+                <constraint firstItem="Oy0-Da-rW2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="bxb-5y-ATA"/>
                 <constraint firstAttribute="trailing" secondItem="LXW-IG-dhC" secondAttribute="trailing" id="cz0-b7-HvO"/>
-                <constraint firstAttribute="trailing" secondItem="Oy0-Da-rW2" secondAttribute="trailing" constant="5" id="fTp-tv-BCC"/>
+                <constraint firstAttribute="trailing" secondItem="Oy0-Da-rW2" secondAttribute="trailing" id="fTp-tv-BCC"/>
             </constraints>
             <size key="customSize" width="213" height="173"/>
+            <connections>
+                <outlet property="iconImageView" destination="LXW-IG-dhC" id="F69-56-j04"/>
+                <outlet property="nickNameBtn" destination="vkH-uA-PxD" id="WXF-DV-zW9"/>
+                <outlet property="onlineBtn" destination="Oy0-Da-rW2" id="M5I-hB-7ME"/>
+                <outlet property="roomNameLabel" destination="b0B-5B-DKX" id="cXe-Zs-4HZ"/>
+            </connections>
             <point key="canvasLocation" x="106.5" y="28.5"/>
         </collectionViewCell>
     </objects>

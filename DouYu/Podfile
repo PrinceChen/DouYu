@@ -7,5 +7,6 @@ target 'DouYu' do
 
   # Pods for DouYu
   pod ‘Alamofire’
+  pod ‘Kingfisher’
 
 end
