@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionPrettyCell" customModule="DouYu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="209" height="245"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="209" height="245"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9n2-Rz-sXk">
+                        <rect key="frame" x="0.0" y="221" width="78" height="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" title="Prince.Chen" image="home_live_player_normal">
+                            <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prD-1R-bZ0">
+                        <rect key="frame" x="158" y="221" width="46" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="TLB-5N-Zu0"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" title="厦门市" image="home_live_vertical_locate">
+                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="live_cell_default_phone" translatesAutoresizingMaskIntoConstraints="NO" id="3xJ-wV-pg6">
+                        <rect key="frame" x="0.0" y="0.0" width="209" height="216"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zh0-UM-ZAn">
+                        <rect key="frame" x="144" y="3" width="60" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Hyd-YJ-iaR"/>
+                            <constraint firstAttribute="width" constant="60" id="hDU-2q-ZAJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" title="5699" backgroundImage="suspensionButtonBG">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="9n2-Rz-sXk" firstAttribute="height" secondItem="prD-1R-bZ0" secondAttribute="height" id="CkW-57-vFK"/>
+                <constraint firstAttribute="trailing" secondItem="3xJ-wV-pg6" secondAttribute="trailing" id="Ikh-BU-dhg"/>
+                <constraint firstItem="3xJ-wV-pg6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Klx-Qw-FTX"/>
+                <constraint firstAttribute="trailing" secondItem="zh0-UM-ZAn" secondAttribute="trailing" constant="5" id="OTu-sH-kFI"/>
+                <constraint firstItem="9n2-Rz-sXk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="aj8-3D-JHu"/>
+                <constraint firstItem="9n2-Rz-sXk" firstAttribute="bottom" secondItem="prD-1R-bZ0" secondAttribute="bottom" id="cej-RU-kIF"/>
+                <constraint firstAttribute="bottom" secondItem="prD-1R-bZ0" secondAttribute="bottom" constant="10" id="f9i-MW-pgg"/>
+                <constraint firstItem="3xJ-wV-pg6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="lRr-vt-kPG"/>
+                <constraint firstItem="zh0-UM-ZAn" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="3" id="lxx-PK-3Uy"/>
+                <constraint firstAttribute="trailing" secondItem="prD-1R-bZ0" secondAttribute="trailing" constant="5" id="uXF-tS-EoN"/>
+                <constraint firstItem="9n2-Rz-sXk" firstAttribute="top" secondItem="3xJ-wV-pg6" secondAttribute="bottom" constant="5" id="yap-n9-siN"/>
+            </constraints>
+            <size key="customSize" width="209" height="245"/>
+            <point key="canvasLocation" x="104.5" y="-45.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="home_live_player_normal" width="14" height="14"/>
+        <image name="home_live_vertical_locate" width="12" height="12"/>
+        <image name="live_cell_default_phone" width="207" height="207"/>
+        <image name="suspensionButtonBG" width="52" height="28"/>
+    </resources>
+</document>
