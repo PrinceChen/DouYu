@@ -24,6 +24,8 @@ fileprivate let kHeaderViewID = "kHeaderViewID"
 
 class RecommendViewController: UIViewController {
     
+    fileprivate lazy var recommendVM: RecommendViewModel = RecommendViewModel()
+    
     fileprivate lazy var collectionView: UICollectionView = { [unowned self] in
         
         let layout = UICollectionViewFlowLayout()
@@ -62,7 +64,7 @@ class RecommendViewController: UIViewController {
         setupUI()
         
         
-        
+        loadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,6 +72,15 @@ class RecommendViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+}
+
+
+extension RecommendViewController {
+    fileprivate func loadData() {
+        
+        recommendVM.requestData()
+        
+    }
 }
 
 extension RecommendViewController {
