@@ -22,7 +22,7 @@ class HomeViewController: UIViewController {
         return titleView
     }()
     
-    fileprivate lazy var pageContentView: PageContentView = {
+    fileprivate lazy var pageContentView: PageContentView = { [weak self] in
         
         let contentH = kScreenH - kStatusBarH - kNavigationBarH - kTitleViewH
         let contentFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH + kTitleViewH, width: kScreenW, height: contentH)
@@ -37,6 +37,8 @@ class HomeViewController: UIViewController {
         
         
         let contentView = PageContentView(frame: contentFrame, childVcs: childVcs, parentViewController: self)
+        
+        contentView.delegate = self
         
         return contentView
     }()
@@ -67,7 +69,7 @@ extension HomeViewController {
         view.addSubview(pageTitleView)
         
         view.addSubview(pageContentView)
-        pageContentView.backgroundColor = .purple
+//        pageContentView.backgroundColor = .purple
     }
     
     private func setupNavigationBar() {
@@ -92,6 +94,13 @@ extension HomeViewController: PageTitleViewDelegate {
     }
 }
 
+
+extension HomeViewController: PageContentViewDelegate {
+    func pageContentView(contentView: PageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+
+        pageTitleView.setTitleWithProgress(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
+    }
+}
 
 
 
