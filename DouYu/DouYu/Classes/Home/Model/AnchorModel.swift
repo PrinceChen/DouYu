@@ -14,7 +14,7 @@ class AnchorModel: NSObject {
     var vertical_src: String = ""
     
     // 0: 电脑直播，1：手机直播
-    var  isVertical: Int = 0
+    var isVertical: Int = 0
     
     var room_name: String = ""
     

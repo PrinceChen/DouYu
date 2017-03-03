@@ -120,7 +120,7 @@ extension PageTitleView {
 
 extension PageTitleView {
     @objc fileprivate func titleLabelClick(tapGes: UITapGestureRecognizer)  {
-        print(#function)
+//        print(#function)
         
         
         

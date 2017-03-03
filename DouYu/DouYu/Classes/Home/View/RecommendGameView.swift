@@ -15,16 +15,8 @@ fileprivate let kEdgeInsetMargin: CGFloat = 10
 class RecommendGameView: UIView {
 
     
-    var groups: [AnchorGroup]? {
+    var groups: [BaseGameModel]? {
         didSet {
-            
-            groups?.removeFirst()
-            groups?.removeFirst()
-            
-            let moreGroup = AnchorGroup()
-            moreGroup.tag_name = "更多"
-            groups?.append(moreGroup)
-            
             collectionView.reloadData()
         }
     }
@@ -60,8 +52,9 @@ extension RecommendGameView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameCellID, for: indexPath) as! CollectionGameCell
         
-        cell.group = groups![indexPath.item]
+//        cell.baseGame = groups![indexPath.item]
     
+        cell.baseGame = groups![(indexPath as NSIndexPath).item]
         return cell
     }
 }

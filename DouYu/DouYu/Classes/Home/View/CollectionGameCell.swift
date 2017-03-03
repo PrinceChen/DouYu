@@ -14,11 +14,12 @@ class CollectionGameCell: UICollectionViewCell {
     @IBOutlet weak var iconImageView: UIImageView!
     
     @IBOutlet weak var titelLabel: UILabel!
-    var group: AnchorGroup? {
+    
+    var baseGame: BaseGameModel? {
         didSet {
-            titelLabel.text = group?.tag_name
+            titelLabel.text = baseGame?.tag_name
             
-            if let iconURL = URL(string: group?.icon_url ?? "") {
+            if let iconURL = URL(string: baseGame?.icon_url ?? "") {
                 iconImageView.kf.setImage(with: iconURL)
             } else {
                 iconImageView.image = UIImage(named: "dyla_btn_more")
@@ -26,10 +27,15 @@ class CollectionGameCell: UICollectionViewCell {
             
         }
     }
+    
+//    var group: AnchorGroup? {
+//        
+//    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
         
         
     }

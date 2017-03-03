@@ -8,9 +8,9 @@
 
 import UIKit
 
-class RecommendViewModel {
+class RecommendViewModel: BaseViewModel {
 
-    lazy var anchorGroups: [AnchorGroup] = [AnchorGroup]()
+//    lazy var anchorGroups: [AnchorGroup] = [AnchorGroup]()
     lazy var cycleModels: [CycleModel] = [CycleModel]()
     fileprivate lazy var bigDataGroup: AnchorGroup = AnchorGroup()
     fileprivate lazy var prettyGroup: AnchorGroup = AnchorGroup()
@@ -77,32 +77,10 @@ extension RecommendViewModel {
 //        print(NSDate.getCurrentTime())
         
         disGroup.enter()
-
-        NetworkTools.requestData(type: .get, URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) { (result) in
-//            print(result)
-            
-            guard let resultDict = result as? [String: NSObject] else {
-                return
-            }
-            
-            guard let dataArray = resultDict["data"] as? [[String: NSObject]] else { return }
-            
-            for dict in dataArray {
-                let group = AnchorGroup(dict: dict)
-                self.anchorGroups.append(group)
-            }
-            
-//            for group in self.anchorGroups {
-//                for anchor in group.anchors {
-//                    print(anchor.nickname)
-//                }
-//                print("______")
-//            }
-            
-            disGroup.leave()
-//            print("3的数据都请求到")
-        }
         
+        loadAnchorData(URLString: "http://capi.douyucdn.cn/api/v1/getHotCate") { 
+            disGroup.leave()
+        }        
         // 排序数据
 
         disGroup.notify(queue: DispatchQueue.main) { 
