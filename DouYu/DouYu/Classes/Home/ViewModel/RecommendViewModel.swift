@@ -11,6 +11,7 @@ import UIKit
 class RecommendViewModel {
 
     lazy var anchorGroups: [AnchorGroup] = [AnchorGroup]()
+    lazy var cycleModels: [CycleModel] = [CycleModel]()
     fileprivate lazy var bigDataGroup: AnchorGroup = AnchorGroup()
     fileprivate lazy var prettyGroup: AnchorGroup = AnchorGroup()
 
@@ -108,6 +109,24 @@ extension RecommendViewModel {
             print("所有的数据都请求到")
             self.anchorGroups.insert(self.prettyGroup, at: 0)
             self.anchorGroups.insert(self.bigDataGroup, at: 0)
+            finishiedCallback()
+        }
+    }
+    
+    func requestCycleData(_ finishiedCallback: @escaping () -> ()) {
+        NetworkTools.requestData(type: .get, URLString: "http://capi.douyucdn.cn/api/v1/slide/6", parameters: ["version":"2.300"]) { (result) in
+            
+            guard let resultDict = result as? [String : NSObject] else {
+                return
+            }
+            
+            guard let dataArray = resultDict["data"] as? [[String : NSObject]] else { return }
+            
+            for dict in dataArray {
+                
+                self.cycleModels.append(CycleModel(dict: dict))
+            }
+            
             finishiedCallback()
         }
     }

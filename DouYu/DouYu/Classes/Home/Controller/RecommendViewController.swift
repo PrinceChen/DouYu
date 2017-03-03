@@ -14,8 +14,12 @@ fileprivate let kNormalItemH = kItemW * 3 / 4
 
 fileprivate let kPrettyItemH = kItemW * 9 / 8
 
-
 fileprivate let kHeaderViewH: CGFloat = 50
+
+
+fileprivate let kCycleViewH = kScreenW * 3 / 8
+
+
 
 fileprivate let kNormalCellID = "kNormalCellID"
 fileprivate let kPrettyCellID = "kPrettyCellID"
@@ -52,6 +56,12 @@ class RecommendViewController: UIViewController {
         return collectionView
     }()
     
+    fileprivate lazy var cycleView: RecommendCycleView = {
+        let cycleView = RecommendCycleView.recommendCycleView()
+        cycleView.frame = CGRect(x: 0, y: -kCycleViewH, width: kScreenW, height: kCycleViewH)
+        return cycleView
+    }()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,12 +92,19 @@ extension RecommendViewController {
             self.collectionView.reloadData()
         }
         
+        recommendVM.requestCycleData { 
+            self.cycleView.cycleModels = self.recommendVM.cycleModels
+        }
     }
 }
 
 extension RecommendViewController {
     fileprivate func setupUI() {
         view.addSubview(collectionView)
+        
+        collectionView.addSubview(cycleView)
+        
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH, left: 0, bottom: 0, right: 0)
     }
 }
 
