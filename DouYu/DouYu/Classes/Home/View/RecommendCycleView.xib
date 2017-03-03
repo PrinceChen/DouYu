@@ -34,7 +34,7 @@
                     <color key="currentPageIndicatorTintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </pageControl>
             </subviews>
-            <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="8XS-Va-rfx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8pT-2M-O1F"/>
                 <constraint firstAttribute="bottom" secondItem="8XS-Va-rfx" secondAttribute="bottom" id="Owi-si-bc8"/>

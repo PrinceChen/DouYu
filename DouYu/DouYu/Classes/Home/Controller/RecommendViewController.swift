@@ -19,6 +19,7 @@ fileprivate let kHeaderViewH: CGFloat = 50
 
 fileprivate let kCycleViewH = kScreenW * 3 / 8
 
+fileprivate let kGameViewH: CGFloat = 90
 
 
 fileprivate let kNormalCellID = "kNormalCellID"
@@ -58,8 +59,14 @@ class RecommendViewController: UIViewController {
     
     fileprivate lazy var cycleView: RecommendCycleView = {
         let cycleView = RecommendCycleView.recommendCycleView()
-        cycleView.frame = CGRect(x: 0, y: -kCycleViewH, width: kScreenW, height: kCycleViewH)
+        cycleView.frame = CGRect(x: 0, y: -(kCycleViewH + kGameViewH), width: kScreenW, height: kCycleViewH)
         return cycleView
+    }()
+    
+    fileprivate lazy var gameView: RecommendGameView = {
+        let gameView = RecommendGameView.recommendGameView()
+        gameView.frame = CGRect(x: 0, y: -kGameViewH, width: kScreenW, height: kGameViewH)
+        return gameView
     }()
     
 
@@ -90,6 +97,8 @@ extension RecommendViewController {
         
         recommendVM.requestData {
             self.collectionView.reloadData()
+            
+            self.gameView.groups = self.recommendVM.anchorGroups
         }
         
         recommendVM.requestCycleData { 
@@ -104,7 +113,9 @@ extension RecommendViewController {
         
         collectionView.addSubview(cycleView)
         
-        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH, left: 0, bottom: 0, right: 0)
+        collectionView.addSubview(gameView)
+        
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH + kGameViewH, left: 0, bottom: 0, right: 0)
     }
 }
 

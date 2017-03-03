@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionGameCell" customModule="DouYu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="英雄联盟" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0RQ-We-Zh9">
+                        <rect key="frame" x="15" y="70" width="50" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="U7z-Tl-nwf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kt5-id-Por">
+                        <rect key="frame" x="15" y="15" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="kt5-id-Por" secondAttribute="height" multiplier="1:1" id="ebo-fb-iWB"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="25"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="0RQ-We-Zh9" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="4Z5-9Z-jVS"/>
+                <constraint firstAttribute="bottom" secondItem="0RQ-We-Zh9" secondAttribute="bottom" constant="5" id="5S0-bN-U0M"/>
+                <constraint firstItem="kt5-id-Por" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="QCP-G5-gnX"/>
+                <constraint firstItem="0RQ-We-Zh9" firstAttribute="top" secondItem="kt5-id-Por" secondAttribute="bottom" constant="5" id="lsk-ce-5Av"/>
+                <constraint firstItem="kt5-id-Por" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="nX4-C7-GIw"/>
+            </constraints>
+            <size key="customSize" width="94" height="109"/>
+            <connections>
+                <outlet property="iconImageView" destination="kt5-id-Por" id="ebo-g3-dQ6"/>
+                <outlet property="titelLabel" destination="0RQ-We-Zh9" id="zlh-Su-Fqe"/>
+            </connections>
+            <point key="canvasLocation" x="47" y="22"/>
+        </collectionViewCell>
+    </objects>
+</document>
