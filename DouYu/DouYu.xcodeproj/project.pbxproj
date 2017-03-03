@@ -54,6 +54,9 @@
 		A38E22C51E697F8A00239D0C /* BaseMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38E22C41E697F8A00239D0C /* BaseMenuViewController.swift */; };
 		A38E22C71E6980C300239D0C /* FunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38E22C61E6980C300239D0C /* FunnyViewModel.swift */; };
 		A38E22C91E699AC900239D0C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38E22C81E699AC900239D0C /* BaseViewController.swift */; };
+		A38E22CF1E69A4B900239D0C /* RoomShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38E22CE1E69A4B900239D0C /* RoomShowViewController.swift */; };
+		A38E22D11E69A4EE00239D0C /* RoomNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38E22D01E69A4EE00239D0C /* RoomNormalViewController.swift */; };
+		A38E22D31E69A7C000239D0C /* CustomNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38E22D21E69A7C000239D0C /* CustomNavigationViewController.swift */; };
 		A39655221E65AFB4002EE73C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39655211E65AFB4002EE73C /* AppDelegate.swift */; };
 		A39655271E65AFB4002EE73C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A39655251E65AFB4002EE73C /* Main.storyboard */; };
 		A39655291E65AFB4002EE73C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A39655281E65AFB4002EE73C /* Assets.xcassets */; };
@@ -112,6 +115,9 @@
 		A38E22C41E697F8A00239D0C /* BaseMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMenuViewController.swift; sourceTree = "<group>"; };
 		A38E22C61E6980C300239D0C /* FunnyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunnyViewModel.swift; sourceTree = "<group>"; };
 		A38E22C81E699AC900239D0C /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		A38E22CE1E69A4B900239D0C /* RoomShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomShowViewController.swift; sourceTree = "<group>"; };
+		A38E22D01E69A4EE00239D0C /* RoomNormalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomNormalViewController.swift; sourceTree = "<group>"; };
+		A38E22D21E69A7C000239D0C /* CustomNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationViewController.swift; sourceTree = "<group>"; };
 		A396551E1E65AFB4002EE73C /* DouYu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouYu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39655211E65AFB4002EE73C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A39655261E65AFB4002EE73C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -143,6 +149,7 @@
 		A351B89E1E65CC52003E312D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A38E22CA1E69A48D00239D0C /* Room */,
 				A351B8A21E65CC52003E312D /* Main */,
 				A351B8A01E65CC52003E312D /* Home */,
 				A351B8A11E65CC52003E312D /* Live */,
@@ -227,6 +234,7 @@
 				A38E22B61E69565A00239D0C /* BaseAnchorViewController.swift */,
 				A38E22C41E697F8A00239D0C /* BaseMenuViewController.swift */,
 				A38E22C81E699AC900239D0C /* BaseViewController.swift */,
+				A38E22D21E69A7C000239D0C /* CustomNavigationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -321,6 +329,39 @@
 				A38E22B41E69534900239D0C /* BaseViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A38E22CA1E69A48D00239D0C /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				A38E22CC1E69A48D00239D0C /* Model */,
+				A38E22CD1E69A48D00239D0C /* View */,
+				A38E22CB1E69A48D00239D0C /* Controller */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
+		A38E22CB1E69A48D00239D0C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A38E22CE1E69A4B900239D0C /* RoomShowViewController.swift */,
+				A38E22D01E69A4EE00239D0C /* RoomNormalViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A38E22CC1E69A48D00239D0C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A38E22CD1E69A48D00239D0C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		A39655151E65AFB4002EE73C = {
@@ -501,6 +542,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A38E229E1E68F0FD00239D0C /* RecommendCycleView.swift in Sources */,
+				A38E22CF1E69A4B900239D0C /* RoomShowViewController.swift in Sources */,
+				A38E22D11E69A4EE00239D0C /* RoomNormalViewController.swift in Sources */,
 				A38E22C71E6980C300239D0C /* FunnyViewModel.swift in Sources */,
 				A39655221E65AFB4002EE73C /* AppDelegate.swift in Sources */,
 				A38E22861E67D0E200239D0C /* CollectionHeaderView.swift in Sources */,
@@ -511,6 +554,7 @@
 				A38E22C51E697F8A00239D0C /* BaseMenuViewController.swift in Sources */,
 				A38E22B21E693CE500239D0C /* AmuseViewModel.swift in Sources */,
 				A38E22B51E69534900239D0C /* BaseViewModel.swift in Sources */,
+				A38E22D31E69A7C000239D0C /* CustomNavigationViewController.swift in Sources */,
 				A38E22B01E69394800239D0C /* AmuseViewController.swift in Sources */,
 				A35D46971E665ABB00CDCC48 /* MainViewController.swift in Sources */,
 				A35D46A11E666E0800CDCC48 /* PageTitleView.swift in Sources */,

@@ -1,32 +1,21 @@
 //
-//  MainViewController.swift
+//  RoomShowViewController.swift
 //  DouYu
 //
-//  Created by prince.chen on 2017/3/1.
+//  Created by prince.chen on 2017/3/3.
 //  Copyright © 2017年 prince.chen. All rights reserved.
 //
 
 import UIKit
 
-class MainViewController: UITabBarController {
+class RoomShowViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        navigationController?.hidesBarsOnSwipe = true;
-
-        addChildVc(storyboardName: "Home")
-        addChildVc(storyboardName: "Live")
-        addChildVc(storyboardName: "Follow")
-        addChildVc(storyboardName: "Discovery")
-        addChildVc(storyboardName: "Profile")
-    }
-    
-    private func addChildVc(storyboardName: String) {
-        let childVc = UIStoryboard(name: storyboardName, bundle: nil).instantiateInitialViewController()!
         
-        addChildViewController(childVc)
+        view.backgroundColor = .purple
     }
 
     override func didReceiveMemoryWarning() {

@@ -59,6 +59,18 @@ class BaseAnchorViewController: BaseViewController {
         
         loadData()
     }
+    
+////    override func viewWillAppear(_ animated: Bool) {
+////        super.viewWillAppear(animated)
+////        
+////        
+////    }
+//    
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        
+//        hidesBottomBarWhenPushed = true
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -118,5 +130,25 @@ extension BaseAnchorViewController: UICollectionViewDataSource {
 }
 
 extension BaseAnchorViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("点击了：\(indexPath)")
+        
+        let anchor = baseVM.anchorGroups[indexPath.section].anchors[indexPath.item]
+        
+        anchor.isVertical == 0 ? pushNormalRoomVc() : presentShowRoomVc()
+        
+    }
     
+    private func presentShowRoomVc() {
+        let showRoomVc = RoomShowViewController()
+        
+        present(showRoomVc, animated: true, completion: nil)
+    }
+    
+    private func pushNormalRoomVc() {
+        let normalRoomVc = RoomNormalViewController()
+        
+        navigationController?.pushViewController(normalRoomVc, animated: true)
+        
+    }
 }
