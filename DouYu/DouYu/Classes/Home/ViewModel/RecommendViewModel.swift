@@ -78,7 +78,7 @@ extension RecommendViewModel {
         
         disGroup.enter()
         
-        loadAnchorData(URLString: "http://capi.douyucdn.cn/api/v1/getHotCate") { 
+        loadAnchorData(isGroupData: true, URLString: "http://capi.douyucdn.cn/api/v1/getHotCate") {
             disGroup.leave()
         }        
         // 排序数据
