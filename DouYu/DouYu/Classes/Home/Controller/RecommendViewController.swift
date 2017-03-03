@@ -11,11 +11,8 @@ import UIKit
 fileprivate let kItemMargin: CGFloat = 10
 fileprivate let kItemW = (kScreenW - 3 * kItemMargin) / 2
 fileprivate let kNormalItemH = kItemW * 3 / 4
-
 fileprivate let kPrettyItemH = kItemW * 9 / 8
-
 fileprivate let kHeaderViewH: CGFloat = 50
-
 
 fileprivate let kCycleViewH = kScreenW * 3 / 8
 
@@ -24,7 +21,6 @@ fileprivate let kGameViewH: CGFloat = 90
 
 fileprivate let kNormalCellID = "kNormalCellID"
 fileprivate let kPrettyCellID = "kPrettyCellID"
-
 fileprivate let kHeaderViewID = "kHeaderViewID"
 
 class RecommendViewController: UIViewController {

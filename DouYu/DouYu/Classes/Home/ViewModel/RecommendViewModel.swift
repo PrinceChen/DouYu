@@ -45,7 +45,7 @@ extension RecommendViewModel {
             
             
             disGroup.leave()
-            print("1的数据都请求到")
+//            print("1的数据都请求到")
         }
         
         // 2.请求颜值数据
@@ -69,12 +69,12 @@ extension RecommendViewModel {
             }
             
             disGroup.leave()
-            print("2的数据都请求到")
+//            print("2的数据都请求到")
         }
         
         // 3.请求后面部分游戏数据
         //"http://capi.douyucdn.cn/api/v1/getHotCate?limit=4&offset=0&time"
-        print(NSDate.getCurrentTime())
+//        print(NSDate.getCurrentTime())
         
         disGroup.enter()
 
@@ -92,21 +92,21 @@ extension RecommendViewModel {
                 self.anchorGroups.append(group)
             }
             
-            for group in self.anchorGroups {
-                for anchor in group.anchors {
-                    print(anchor.nickname)
-                }
-                print("______")
-            }
+//            for group in self.anchorGroups {
+//                for anchor in group.anchors {
+//                    print(anchor.nickname)
+//                }
+//                print("______")
+//            }
             
             disGroup.leave()
-            print("3的数据都请求到")
+//            print("3的数据都请求到")
         }
         
         // 排序数据
 
         disGroup.notify(queue: DispatchQueue.main) { 
-            print("所有的数据都请求到")
+//            print("所有的数据都请求到")
             self.anchorGroups.insert(self.prettyGroup, at: 0)
             self.anchorGroups.insert(self.bigDataGroup, at: 0)
             finishiedCallback()

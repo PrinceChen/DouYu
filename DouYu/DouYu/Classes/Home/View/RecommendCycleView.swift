@@ -46,6 +46,8 @@ class RecommendCycleView: UIView {
     }
     
     override func layoutSubviews() {
+        super.layoutSubviews()
+        
         // layout
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = collectionView.bounds.size
