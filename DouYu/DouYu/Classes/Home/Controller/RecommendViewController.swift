@@ -61,7 +61,7 @@ extension RecommendViewController {
             self.gameView.groups = groups
             
             // 3.数据请求完成
-//            self.loadDataFinished()
+            self.loadDataFinished()
         }
         
         recommendVM.requestCycleData { 

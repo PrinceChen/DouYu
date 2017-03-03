@@ -53,6 +53,7 @@
 		A38E22C31E697F1500239D0C /* FunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38E22C21E697F1500239D0C /* FunnyViewController.swift */; };
 		A38E22C51E697F8A00239D0C /* BaseMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38E22C41E697F8A00239D0C /* BaseMenuViewController.swift */; };
 		A38E22C71E6980C300239D0C /* FunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38E22C61E6980C300239D0C /* FunnyViewModel.swift */; };
+		A38E22C91E699AC900239D0C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38E22C81E699AC900239D0C /* BaseViewController.swift */; };
 		A39655221E65AFB4002EE73C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39655211E65AFB4002EE73C /* AppDelegate.swift */; };
 		A39655271E65AFB4002EE73C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A39655251E65AFB4002EE73C /* Main.storyboard */; };
 		A39655291E65AFB4002EE73C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A39655281E65AFB4002EE73C /* Assets.xcassets */; };
@@ -110,6 +111,7 @@
 		A38E22C21E697F1500239D0C /* FunnyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunnyViewController.swift; sourceTree = "<group>"; };
 		A38E22C41E697F8A00239D0C /* BaseMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMenuViewController.swift; sourceTree = "<group>"; };
 		A38E22C61E6980C300239D0C /* FunnyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunnyViewModel.swift; sourceTree = "<group>"; };
+		A38E22C81E699AC900239D0C /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A396551E1E65AFB4002EE73C /* DouYu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouYu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39655211E65AFB4002EE73C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A39655261E65AFB4002EE73C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				A35D46941E665ABB00CDCC48 /* MainViewController.swift */,
 				A38E22B61E69565A00239D0C /* BaseAnchorViewController.swift */,
 				A38E22C41E697F8A00239D0C /* BaseMenuViewController.swift */,
+				A38E22C81E699AC900239D0C /* BaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 				A35D46A71E667E8F00CDCC48 /* UIColor-Extension.swift in Sources */,
 				A38E22831E67A9D700239D0C /* RecommendViewController.swift in Sources */,
 				A38E22981E6831B400239D0C /* AnchorGroup.swift in Sources */,
+				A38E22C91E699AC900239D0C /* BaseViewController.swift in Sources */,
 				A38E22C51E697F8A00239D0C /* BaseMenuViewController.swift in Sources */,
 				A38E22B21E693CE500239D0C /* AmuseViewModel.swift in Sources */,
 				A38E22B51E69534900239D0C /* BaseViewModel.swift in Sources */,

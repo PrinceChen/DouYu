@@ -23,7 +23,7 @@ let kPrettyItemH = kNormalItemW * 9 / 8
 
 let kPrettyCellID = "kPrettyCellID"
 
-class BaseAnchorViewController: UIViewController {
+class BaseAnchorViewController: BaseViewController {
     
     
     var baseVM: BaseViewModel!
@@ -69,8 +69,13 @@ class BaseAnchorViewController: UIViewController {
 }
 
 extension BaseAnchorViewController {
-    func setupUI() {
+    override func setupUI() {
+        contentView = collectionView
+    
         view.addSubview(collectionView)
+        
+        super.setupUI()
+
     }
 }
 

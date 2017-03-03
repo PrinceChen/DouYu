@@ -40,6 +40,9 @@ extension FunnyViewController {
             var tempGroups = self.funnyVM.anchorGroups
             tempGroups.removeFirst()
             self.menuView.groups = tempGroups
+            
+            self.loadDataFinished()
+
         }
     }
 }
